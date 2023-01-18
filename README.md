@@ -135,7 +135,7 @@ Script:
 
 **c.** After you select input output parameters (`hisat2IndexPrefix`, `mapped_reads` and `outputFileTxt` parameters), add their names and enter the script. The page should look like this;
 
-<img src="images/build11-alignment-summary.png" width="80%">
+<img src="images/build11-hisat2.png" width="80%">
 
 **d.** Please save changes before you close the screen.
 
