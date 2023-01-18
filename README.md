@@ -169,7 +169,7 @@ Here Exercise 1 is finished. Please move to Exercise 2 to build the pipeline usi
 
 ## Exercise 2 - Building a pipeline
 
-At the top of the page, you’ll notice `Pipeline Name` box, <img src="images/pipelineRenameBox.png" width="20%">. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your menu.
+At the top of the page, you’ll notice `Pipeline Name` box. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your menu.
 
 <img src="images/build14-menu.png" width="50%">
 
@@ -201,55 +201,37 @@ At the top of the page, you’ll notice `Pipeline Name` box, <img src="images/pi
 
 <img src="images/project_runbutton.png" width="20%">
 
-  **2.** This button opens a new window where you can create a new project by clicking “Create a Project” button. After entering and saving the name of the project, it will be added to your project list. 
-
-<img src="images/execute1_create_project.png" width="80%">
-
-  **3.** Now you can select your project by clicking on the project.
+  **2.** This button opens a new window where you can select your project by clicking on the project.
 You will then proceed by entering run name which will be added to your run list of the project. Clicking “Save run” will redirect you to the “run page” where you can initiate your run.
 
 <img src="images/execute2_enter_runname.png" width="80%">
 
-  **4.** Here, please enter your working directory, choose your "Run Environment", click "Use Singularity Image" and enter the values below;
+  **3.** Here, please choose your "Run Environment", click "Use Docker Image" and enter the values below;
   
-  **4A. For Test Users**
 <pre>
-Work Directory: /export/tests/test-<b>youruserid</b>
-Run Environment: Local
-Use Singularity Image: Checked
+Run Environment: Via Demo Environment(AWS Batch)
+Use Docker Image: Checked
 Image Path: public.ecr.aws/t4w5x8f2/viascientific/rnaseq:3.0
 
 Inputs:
-  - bedFile: /data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed (Use <b>Manually</b> tab)
-  - Hisat2_Index: /data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index/genome (Use <b>Manually</b> tab)
-  - Input_Reads: First go to <b>Files</b> Tab in "<b>Select/Add Input File</b>" modal and click "<b>Add File</b>" button. 
-Then enter "File Directory (Full Path)" as: <b>https://galaxyweb.umassmed.edu/pub/dnext_data/tutorial/fastq_data/single/</b> and follow <a href="#creating-collection">Creating Collection</a> section.
+  - bedFile: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed (Use <b>Manually</b> tab)
+  - Hisat2_Index: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index (Use <b>Manually</b> tab)
+  - Input_Reads: First go to <b>Files</b> tab and click "<b>Add File</b>" button. 
+Then enter "File Location" as: <b>https://galaxyweb.umassmed.edu/pub/dnext_data/tutorial/fastq_data/single/</b> and follow <a href="#creating-collection">Creating Collection</a> section.
 
 <img src="images/execute3_enter_workdir.png" width="80%">
 </pre>  
 
-  **4B. For GHPCC Users**
+**4.** Click advanced tab to enter Publish Directory.
 
-<pre>
-Work Directory: /home/<b>yourclusterusername</b>/test1
-Run Environment: UMASS Cluster
-Use Singularity Image: Checked
-Image Path: /project/umw_biocore/singularity/UMMS-Biocore-rna-seq-1.0.img
-Run Options: --bind /project
+Publish Directory: s3://s3-informatics/shared-data/dnext/dnext_runs
 
-Inputs:
-  - bedFile: /project/umw_biocore/training/genes.bed (Use <b>Manually</b> tab)
-  - Hisat2_Index: /project/umw_biocore/training/Hisat2Index/genome (Use <b>Manually</b> tab)
-  - Input_Reads: First go to <b>Files</b> Tab in "<b>Select/Add Input File</b>" modal and click "<b>Add File</b>" button. 
-Then enter "File Directory (Full Path)" as: <b>https://galaxyweb.umassmed.edu/pub/dnext_data/tutorial/fastq_data/single/</b> and follow <a href="#creating-collection">Creating Collection</a> section.
+**5.**  Now, we are ready to enter the inputs we defined for the pipeline.
+Please choose the "Manually" tab and enter the location of the bed file. 
+* bedFile: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed
 
-<img src="images/execute20-ghpcc.png" width="100%">
-</pre>  
-
-
-  **5.** Now, we are ready to enter inputs we defined for the pipeline. Please choose "Manually" tab.First enter the location of the bed file. 
-
-  **6.** Second enter the prefix for the hisat2 index files. Please choose "Manually" tab. 
+**6.** Second, enter the hisat2 index directory. Please use the "Manually" tab. 
+* Hisat2_Index: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index
 
   #### Creating Collection
   **7.**  In order to add files; First go to Files Tab in "Select/Add Input File" modal and click "Add File" button
