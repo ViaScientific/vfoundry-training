@@ -40,21 +40,6 @@ Overview
     * [RSeQC process](#3-rseqc-process)
   * [Exercise 2: Building a pipeline](#exercise-2---building-a-pipeline)
   * [Exercise 3: Running a pipeline](#exercise-3---executing-a-pipeline)
-  * [Exercise 4 (optional): Supporting single and paired end reads](#exercise-4-optional---supporting-both-single-and-paired-end-reads)
-
-
-If you prefer, you can click on the video links to follow the tutorial in a video.
-
-[![Watch the video](images/developer_guide1_youtube.png)](https://youtu.be/zfLXCgJFls4)
-
-**Video Summary:**
-  * Exercise 1: Creating processes
-    - FastQC process [at 0:07](https://youtu.be/zfLXCgJFls4?t=7)
-    - Hisat2 process [at 0:55](https://youtu.be/zfLXCgJFls4?t=55)
-    - RSeQC process [at 2:02](https://youtu.be/zfLXCgJFls4?t=122)
-  * Exercise 2: Building a pipeline [at 2:43](https://youtu.be/zfLXCgJFls4?t=163)
-  * Exercise 3: Running a pipeline [at 4:34](https://youtu.be/zfLXCgJFls4?t=274)
-  
 
 # Before you start
 
@@ -66,9 +51,11 @@ This guide will walk you through how to start using Foundry pipelines and creati
 
 ## Exercise 1 - Creating processes
 
-Once logged in, click on the "Pipelines" link at the top menu to access pipeline builder page. Here you can write a summary descripton about your pipeline using "Description" tab, start developing your pipeline using "Workflow" tab, and adding extra files or setting some extra parameters using "Advanced" tab. Let's get into some details about the pipeline elements.
+to access pipeline builder page.
 
-<img src="images/build1-builderpage.png" width="80%">
+Once logged in, click on the "Projects" section at the top menu and click "Add a New Project" button. Here you can click "Pipelines" tab and then click "Create Pipeline" button. Now you can write a descripton about your pipeline using "Description" tab, start developing your pipeline using "Workflow" tab, and adding extra files or setting some extra parameters using "Advanced" tab. Let's get into some details about the pipeline elements.
+
+<img src="images/build0-builderpage.png" width="80%">
 
 ### What is a "process"?
 
