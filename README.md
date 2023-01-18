@@ -169,7 +169,7 @@ Here Exercise 1 is finished. Please move to Exercise 2 to build the pipeline usi
 
 ## Exercise 2 - Building a pipeline
 
-At the top of the page, you’ll notice `Pipeline Name` box, <img src="images/pipelineRenameBox.png" width="3%">. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your menu.
+At the top of the page, you’ll notice `Pipeline Name` box, <img src="images/pipelineRenameBox.png" width="20%">. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your menu.
 
 <img src="images/build14-menu.png" width="50%">
 
