@@ -73,10 +73,10 @@ A process usually has inputs, outputs and script sections. In this tutorial, you
 2. Hisat2 process
 3. RSeQC process
 
-You’ll notice several buttons at the left menu. New processes are created by clicking green “New process” button.
+You’ll notice several buttons at the left menu. New processes are created by clicking blue `New process` button <img src="images/addprocessbutton.png" width="3%">.
 
 ### 1. FastQC process
-**a.** First, please click, blue “New process” button <img src="images/addprocessbutton.png" width="4%"> in the left menu to open "Add New Process" modal.
+**a.** First, please click, blue `New process` button <img src="images/addprocessbutton.png" width="3%"> in the left menu to open "Add New Process" window.
 
 **b.** Please enter FastQC for the process name and define a new "Menu Group". 
 
@@ -111,7 +111,7 @@ Script:
 
 Let's create Hisat2 process. 
 
-**a.** First, please click, green “New process” button to open "Add New Process" modal.
+**a.** First, please click, blue “New process” button to open "Add New Process" modal.
 
 **b.** Inputs, outputs and scripts should be defined like below;
 
@@ -140,7 +140,7 @@ Script:
 
 ### 3. RSeQC process
 
-**a.** First, please click, green “New process” button to open "Add New Process" modal.
+**a.** First, please click, blue “New process” button to open "Add New Process" modal.
 
 **b.** The form should be filled using the information below;
 
@@ -168,12 +168,11 @@ Here Exercise 1 is finished. Please move to Exercise 2 to build the pipeline usi
 
 ## Exercise 2 - Building a pipeline
 
-
-Once logged in, click to the pipeline button in the top left of the screen. You’ll notice Enter Pipeline Name box, just below the Pipelines button. Before you start building the pipeline make sure you have the processes available in your menu.
+At the top of the page, you’ll notice `Pipeline Name` box, <img src="images/pipelineRenameBox.png" width="3%">. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your menu.
 
 <img src="images/build14-menu.png" width="50%">
 
-**a.** Please enter a name to your pipeline. E.g. "RNA-Seq-Tutorial" and select your menu group "public pipelines" and press save button.
+**a.** Please enter a name to your pipeline. E.g. "RNA-Seq-Tutorial" and press save button.
 
 **b.** Please drag and drop FastQC, Hisat2 and RSeQC to your workspace;
 
@@ -276,7 +275,7 @@ collection name: test collection
 
 <img src="images/execute_9_choosefiles.png" width="100%">
 
-  **11.** After we fill the inputs,  the orange "Waiting" button at the top right should turn to green "Ready to Run" button. Press that "Ready to Run" button.
+  **11.** After we fill the inputs,  the orange "Waiting" button at the top right should turn to green "Run" button. Now, you can press that "Run" button.
 
   **12.** All run should finish in a couple of minutes. When the run finalized the log section will be look like below;
 
