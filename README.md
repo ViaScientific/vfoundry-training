@@ -51,11 +51,13 @@ This guide will walk you through how to start using Foundry pipelines and creati
 
 ## Exercise 1 - Creating processes
 
-to access pipeline builder page.
+Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. This is the place to configure your project. To access pipeline builder page, click `Pipelines` tab and then click `Create Pipeline` button. 
 
-Once logged in, click on the "Projects" section at the top menu and click "Add a New Project" button. Here you can click "Pipelines" tab and then click "Create Pipeline" button. Now you can write a descripton about your pipeline using "Description" tab, start developing your pipeline using "Workflow" tab, and adding extra files or setting some extra parameters using "Advanced" tab. Let's get into some details about the pipeline elements.
+<img src="images/build0-builderpage.png" width="99%">
 
-<img src="images/build0-builderpage.png" width="80%">
+Now you can write a descripton about your pipeline using `Description` tab, start developing your pipeline using `Workflow` tab, and adding extra files or setting some extra parameters using `Advanced` tab. Let's get into some details about the pipeline elements.
+
+<img src="images/build1-builderpage.png" width="99%">
 
 ### What is a "process"?
 
