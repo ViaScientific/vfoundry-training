@@ -216,7 +216,7 @@ You will then proceed by entering run name which will be added to your run list 
 
 <img src="images/execute2_enter_runname.png" width="80%">
 
-  **3.** Here, please choose your "Run Environment", click "Use Docker Image" and enter the values below;
+  **3.** Here, please choose your `Run Environment`, click `Use Docker Image` and enter the`Image Path` below;
   
 <pre>
 Run Environment: Via Demo Environment(AWS Batch)
@@ -232,54 +232,58 @@ Then enter "File Location" as: <b>s3://viascientific/run_data/test_data/fastq_mo
 <img src="images/selectRunEnv.png" width="80%">
 </pre>  
 
-**4.**  Now, we are ready to enter the inputs we defined for the pipeline.
-Please choose the "Manually" tab and enter the location of the bed file. 
-* bedFile: s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/genes/genes.bed
+**4.**  Now, we are ready to enter the inputs we defined for the pipeline. Please choose the "Manually" tab and enter the location of the bed file. 
+```
+bedFile:  s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/genes/genes.bed
+```
 
 **5.** Second, enter the hisat2 index directory. Please use the "Manually" tab. 
-* Hisat2_Index: s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/Hisat2Index
+```
+Hisat2_Index: s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/Hisat2Index
+```
 
 #### Creating Collection
-**6.**  In order to add files; First go to Files Tab in "Select/Add Input File" modal and click "Add File" button
+**6.**  To enter Input_Reads, click `Enter File` button. Then go to `Files` Tab and click "Add File" button.
 
 <img src="images/execute6_add_files.png" width="100%">
 
-**7.**  Enter the location of your files. Here for the test case we will use the url below for File Directory (Full Path) and please click **Search button** to get the list of files: 
+**7.**  Enter the location of your files and click **Search button** to get the list of files: 
   
 File Location:
 ```
 s3://viascientific/run_data/test_data/fastq_mouse_single
 ```
-Then please choose `Single List` for the **Collection Type** and press `add all files` button.
 
 <img src="images/fileLocation.png" width="100%">
 
-  **9.** Here there is an option to change the names but we will keep them as they are and enter a collection name and "save files".
+**8.** Then please choose `Single List` for the **Collection Type** and press `add all files` button.
+
+**9.** Here there is an option to change the names but we will keep them as they are. Enter a collection name and click "save files".
 ```
 collection name: test collection
 ```
 <img src="images/enter_collectionname.png" width="100%">
 
-  **10.** In the next screen, the user can still add or remove some samples. Let's click "Save file" button to process all samples.
+**10.** In the next screen, the user can still add or remove some samples. Let's click "Save file" button to process all samples.
 
 <img src="images/execute_9_choosefiles.png" width="100%">
 
-  **11.** After we fill the inputs, the orange "Waiting" button at the top right should turn to green "Run" button. Now, you can press that button to start your run.
+**11.** After we fill the inputs, the orange "Waiting" button at the top right should turn to green "Run" button. Now, you can press that button to start your run.
 
-  **12.** All run should finish in a couple of minutes. When the run finalized the log section will be look like below;
+**12.** All run should finish in a couple of minutes. When the run finalized the log section will be look like below;
 
   **a. Logs**:
 
 <img src="images/execute11_logtab.png" width="100%">
 
   **b. Timeline**:
-<img src="images/execute19_parallel_run.png" width="100%">
+<img src="images/timeline.png" width="100%">
 
   **c. Nextflow Reports**:
-<img src="images/execute13_nextflowreports.png" width="100%">
+<img src="images/logtab.png" width="100%">
 
-  **13.** In the report section, you can monitor all defined reports in the pipeline;
-<img src="images/execute14_Reports.png" width="100%">
+**13.** In the report section, you can monitor all defined reports in the pipeline;
+<img src="images/nx_report.png" width="100%">
 
   **a. FastQC**
 <img src="images/execute15_FastQC.png" width="100%">
