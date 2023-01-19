@@ -183,7 +183,7 @@ Before you start building the pipeline make sure you have the processes availabl
 
 **c.** Please drag and drop three `Input parameters` and change their names to `Input_Reads`, `Hisat2_Index` and `bedFile` and connect them to their processes;  
 
-<img src="images/outputParameters.png" width="20%">
+<img src="images/inputParameters.png" width="20%">
 
 <img src="images/workflow1.png" width="80%">
 
