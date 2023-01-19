@@ -1,3 +1,4 @@
-1. [Session 1: Linux environment](session1/session1.md)</br></br>
+Welcome to Foundry Training!
 
-2. [Session 2.1: UMass Cluster](session2/session2.md)</br>
+[Session 1: RNA-Seq Tutorial](demo_rna-seq_tutorial.md)</br>
+[Session 2: Developer Tutorial](demo_developer_tutorial.md)</br>
