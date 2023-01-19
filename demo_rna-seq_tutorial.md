@@ -3,6 +3,10 @@ Expected learning outcome
 
 To understand the basics of Foundry, and do RNA-Seq analysis with sample mouse data.
 
+# Before you start
+
+Please go to https://dev.viafoundry.net and login into your account. If you have an issue about login, please let us know about it (support@viascientific.com). We will set an account for you.
+
 Creating a Run
 ========
 
