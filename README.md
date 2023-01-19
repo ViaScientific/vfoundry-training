@@ -169,25 +169,29 @@ Here Exercise 1 is finished. Please move to Exercise 2 to build the pipeline usi
 
 ## Exercise 2 - Building a pipeline
 
-At the top of the page, you’ll notice `Pipeline Name` box. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your Process Menu.
+Before you start building the pipeline make sure you have the processes available in your Process Menu.
+
+<img src="images/processList.png" width="20%">
+
+**a.** At the top of the page, you’ll notice `Pipeline Name` box. You can rename your pipeline by clicking here. Please enter a name to your pipeline. E.g. "RNA-Seq-Tutorial" and press save button.
 
 <img src="images/build14-menu.png" width="80%">
-
-**a.** Please enter a name to your pipeline. E.g. "RNA-Seq-Tutorial" and press save button.
-
-<img src="images/processList.png" width="80%">
 
 **b.** Please drag and drop FastQC, Hisat2 and RSeQC to your workspace;
 
 <img src="images/build15-drag-drop.png" width="80%">
 
-**c.** Please drag and drop three Input parameters and change their names to `Input_Reads`, `Hisat2_Index` and `bedFile` and connect them to their processes;     
+**c.** Please drag and drop three `Input parameters` and change their names to `Input_Reads`, `Hisat2_Index` and `bedFile` and connect them to their processes;  
+
+<img src="images/outputParameters.png" width="20%">
+
+<img src="images/workflow1.png" width="80%">
 
 **d.** Connect your Hisat2 process with RSeQC process using mapped_reads parameter in both. You will observe that, when the types match you can connect the two processes using their matching input and output parameters.
 
 **e.** Drag & Drop three `output parameters` from the sidebar 
 
-<img src="images/outputParameters.png" width="70%">
+<img src="images/outputParameters.png" width="20%">
 
 and name them `FastQC_output`, `Hisat2_Summary`, and `RSeQC_output` and connect them to their corresponding processes. While naming, click their "Publish to Web Directory" and choose the right output format according to the output type of the process.
  
