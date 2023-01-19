@@ -43,7 +43,7 @@ Overview
 
 # Before you start
 
-Please go to https://dev.viafoundry.net and login into your account. If you have an issue about login, please let us know about it (onur@viascientific.com). We will set an account for you.
+Please go to https://dev.viafoundry.net and login into your account. If you have an issue about login, please let us know about it (support@viascientific.com). We will set an account for you.
 
 # Tutorial guide
 
@@ -169,21 +169,27 @@ Here Exercise 1 is finished. Please move to Exercise 2 to build the pipeline usi
 
 ## Exercise 2 - Building a pipeline
 
-At the top of the page, you’ll notice `Pipeline Name` box. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your menu.
+At the top of the page, you’ll notice `Pipeline Name` box. You can rename your pipeline by clicking here. Before you start building the pipeline make sure you have the processes available in your Process Menu.
 
-<img src="images/build14-menu.png" width="50%">
+<img src="images/build14-menu.png" width="80%">
 
 **a.** Please enter a name to your pipeline. E.g. "RNA-Seq-Tutorial" and press save button.
+
+<img src="images/processList.png" width="80%">
 
 **b.** Please drag and drop FastQC, Hisat2 and RSeQC to your workspace;
 
 <img src="images/build15-drag-drop.png" width="80%">
 
-**c.** Please drag and drop three Input parameters and change their names to "Input_Reads", "Hisat2_Index" and "bedFile" and connect them to their processes;     
+**c.** Please drag and drop three Input parameters and change their names to `Input_Reads`, `Hisat2_Index` and `bedFile` and connect them to their processes;     
 
 **d.** Connect your Hisat2 process with RSeQC process using mapped_reads parameter in both. You will observe that, when the types match you can connect the two processes using their matching input and output parameters.
 
-**e.** Drag & Drop three "output parameters" from the side bar and name them "FastQC_output", "Hisat2_Summary", and "RSeQC_output" and connect them to their corresponding processes. While naming, click their "Publish to Web Directory" and choose the right output format according to the output type of the process.
+**e.** Drag & Drop three `output parameters` from the sidebar 
+
+<img src="images/outputParameters.png" width="70%">
+
+and name them `FastQC_output`, `Hisat2_Summary`, and `RSeQC_output` and connect them to their corresponding processes. While naming, click their "Publish to Web Directory" and choose the right output format according to the output type of the process.
  
 <img src="images/build16-name1.png" width="50%">
 
@@ -214,51 +220,47 @@ Use Docker Image: Checked
 Image Path: public.ecr.aws/t4w5x8f2/viascientific/rnaseq:3.0
 
 Inputs:
-  - bedFile: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed (Use <b>Manually</b> tab)
-  - Hisat2_Index: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index (Use <b>Manually</b> tab)
+  - bedFile: s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/genes/genes.bed (Use <b>Manually</b> tab)
+  - Hisat2_Index: s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/Hisat2Index (Use <b>Manually</b> tab)
   - Input_Reads: First go to <b>Files</b> tab and click "<b>Add File</b>" button. 
-Then enter "File Location" as: <b>https://galaxyweb.umassmed.edu/pub/dnext_data/tutorial/fastq_data/single/</b> and follow <a href="#creating-collection">Creating Collection</a> section.
+Then enter "File Location" as: <b>s3://viascientific/run_data/test_data/fastq_mouse_single</b> and follow <a href="#creating-collection">Creating Collection</a> section.
 
-<img src="images/execute3_enter_workdir.png" width="80%">
+<img src="images/selectRunEnv.png" width="80%">
 </pre>  
 
-**4.** Click advanced tab to enter Publish Directory.
-
-Publish Directory: s3://s3-informatics/shared-data/dnext/dnext_runs
-
-**5.**  Now, we are ready to enter the inputs we defined for the pipeline.
+**4.**  Now, we are ready to enter the inputs we defined for the pipeline.
 Please choose the "Manually" tab and enter the location of the bed file. 
-* bedFile: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed
+* bedFile: s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/genes/genes.bed
 
-**6.** Second, enter the hisat2 index directory. Please use the "Manually" tab. 
-* Hisat2_Index: /export/dnext_data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index
+**5.** Second, enter the hisat2 index directory. Please use the "Manually" tab. 
+* Hisat2_Index: s3://viascientific/run_data/genome_data/mousetest/mm10/mm10/refseq_170804/Hisat2Index
 
-  #### Creating Collection
-  **7.**  In order to add files; First go to Files Tab in "Select/Add Input File" modal and click "Add File" button
+#### Creating Collection
+**6.**  In order to add files; First go to Files Tab in "Select/Add Input File" modal and click "Add File" button
 
 <img src="images/execute6_add_files.png" width="100%">
 
-  **8.**  Enter the location of your files. Here for the test case we will use the url below for File Directory (Full Path) and please click "View Directory" button to get the list of files: 
+**7.**  Enter the location of your files. Here for the test case we will use the url below for File Directory (Full Path) and please click **Search button** to get the list of files: 
   
-File Directory (Full Path):
+File Location:
 ```
-https://galaxyweb.umassmed.edu/pub/dnext_data/tutorial/fastq_data/single/
+s3://viascientific/run_data/test_data/fastq_mouse_single
 ```
-Then please choose "Single List" for the "Collection Type" and press "add all files" button.
+Then please choose `Single List` for the **Collection Type** and press `add all files` button.
 
-<img src="images/execute7_enter_fullpath.png" width="100%">
+<img src="images/fileLocation.png" width="100%">
 
   **9.** Here there is an option to change the names but we will keep them as they are and enter a collection name and "save files".
 ```
 collection name: test collection
 ```
-<img src="images/execute8_enter_collectionname.png" width="100%">
+<img src="images/enter_collectionname.png" width="100%">
 
   **10.** In the next screen, the user can still add or remove some samples. Let's click "Save file" button to process all samples.
 
 <img src="images/execute_9_choosefiles.png" width="100%">
 
-  **11.** After we fill the inputs,  the orange "Waiting" button at the top right should turn to green "Run" button. Now, you can press that "Run" button.
+  **11.** After we fill the inputs, the orange "Waiting" button at the top right should turn to green "Run" button. Now, you can press that button to start your run.
 
   **12.** All run should finish in a couple of minutes. When the run finalized the log section will be look like below;
 
