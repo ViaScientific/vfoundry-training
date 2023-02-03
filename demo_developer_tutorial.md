@@ -133,7 +133,7 @@ Script:
 
 ```
 
-**c.** After you select input output parameters (`hisat2IndexPrefix`, `mapped_reads` and `outputFileTxt` parameters), add their names and enter the script. The page should look like this;
+**c.** After you select input(`reads` and `hisat2Index`) and output parameters (`mapped_reads` and `outputFileTxt`), add their names and enter the script. The page should look like this;
 
 <img src="images/build11-hisat2.png" width="80%">
 
