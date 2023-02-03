@@ -230,7 +230,7 @@ Run Environment: Via Demo Environment(AWS Batch)
 Use Docker Image: Checked
 Image Path: public.ecr.aws/t4w5x8f2/viascientific/rnaseq:3.0
 
-<img src="images/dockerSelect.png" width="80%">
+<img src="images/dockerSelect2.png" width="80%">
 </pre>  
 
 
