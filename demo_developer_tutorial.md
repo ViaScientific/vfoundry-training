@@ -216,17 +216,14 @@ You will then proceed by entering run name which will be added to your run list 
 
 <img src="images/execute2_enter_runname.png" width="80%">
 
-  **3.** Here, please choose your `Run Environment`
+  **3.** Here, please choose your `Run Environment` (Via Demo Environment(AWS Batch))
   
-<pre>
-Run Environment: Via Demo Environment(AWS Batch)
-
 <img src="images/runEnvSelect.png" width="80%">
-</pre>  
 
-  **4.** Then click the advanced tab and click `Use Docker Image` and enter the`Image Path` below;
+  **4.** Then click the `Advanced` tab and go to `Run Container` section. Click `Use Docker Image` and enter the`Image Path` below;
   
 <pre>
+Run Container:
 Use Docker Image: Checked
 Image Path: public.ecr.aws/t4w5x8f2/viascientific/rnaseq:3.0
 
@@ -234,7 +231,8 @@ Image Path: public.ecr.aws/t4w5x8f2/viascientific/rnaseq:3.0
 </pre>  
 
 
-  **5.** Now, we are ready to enter the inputs we defined for the pipeline. Click the Run Settings tab and enter the inputs. Please choose the "Manually" tab and enter the location of the bed file.
+  **5.** Now, we are ready to enter the inputs we defined for the pipeline. 
+  Click the `Run Settings` tab to enter bed file. Please choose the "Manually" tab to enter the location of the bed file.
   
 ```
 bedFile:  s3://viascientific/run_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed
@@ -277,16 +275,12 @@ collection name: test collection
 
   **a. Logs**:
 
-<img src="images/execute11_logtab.png" width="100%">
+<img src="images/log_time.png" width="100%">
 
   **b. Timeline**:
-<img src="images/timeline.png" width="100%">
-
-  **c. Nextflow Reports**:
-<img src="images/logtab.png" width="100%">
+<img src="images/timeline2.png" width="100%">
 
 **13.** In the report section, you can monitor all defined reports in the pipeline;
-<img src="images/nx_report.png" width="100%">
 
   **a. FastQC**
 <img src="images/execute15_FastQC.png" width="100%">
