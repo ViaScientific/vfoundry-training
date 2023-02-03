@@ -232,16 +232,20 @@ Image Path: public.ecr.aws/t4w5x8f2/viascientific/rnaseq:3.0
 
 
   **5.** Now, we are ready to enter the inputs we defined for the pipeline. 
-  Click the `Run Settings` tab to enter bed file. Please choose the "Manually" tab to enter the location of the bed file.
+  Click the `Run Settings` tab to enter bed file. Please use the **Manually** tab.
   
-```
+<pre>
 bedFile:  s3://viascientific/run_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed
-```
 
-**6.** Second, enter the hisat2 index directory. Please use the "Manually" tab. 
-```
+<img src="images/bedFile.png" width="80%">
+</pre>  
+
+**6.** Second, enter the hisat2 index directory. Please use the **Manually** tab. 
+<pre>
 Hisat2_Index: s3://viascientific/run_data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index
-```
+
+<img src="images/hisat2IndexFile.png" width="80%">
+</pre> 
 
 #### Creating Collection
 **7.**  To enter Input_Reads, click `Enter File` button. Then go to `Files` Tab and click "Add File" button.
