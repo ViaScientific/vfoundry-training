@@ -216,38 +216,41 @@ You will then proceed by entering run name which will be added to your run list 
 
 <img src="images/execute2_enter_runname.png" width="80%">
 
-  **3.** Here, please choose your `Run Environment`, click `Use Docker Image` and enter the`Image Path` below;
+  **3.** Here, please choose your `Run Environment`
   
 <pre>
 Run Environment: Via Demo Environment(AWS Batch)
+
+<img src="images/runEnvSelect.png" width="80%">
+</pre>  
+
+  **4.** Then click the advanced tab and click `Use Docker Image` and enter the`Image Path` below;
+  
+<pre>
 Use Docker Image: Checked
 Image Path: public.ecr.aws/t4w5x8f2/viascientific/rnaseq:3.0
 
-Inputs:
-  - bedFile: s3://viascientific/run_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed (Use <b>Manually</b> tab)
-  - Hisat2_Index: s3://viascientific/run_data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index (Use <b>Manually</b> tab)
-  - Input_Reads: First go to <b>Files</b> tab and click "<b>Add File</b>" button. 
-Then enter "File Location" as: <b>s3://viascientific/run_data/test_data/fastq_mouse_single</b> and follow <a href="#creating-collection">Creating Collection</a> section.
-
-<img src="images/selectRunEnv.png" width="80%">
+<img src="images/dockerSelect.png" width="80%">
 </pre>  
 
-**4.**  Now, we are ready to enter the inputs we defined for the pipeline. Please choose the "Manually" tab and enter the location of the bed file. 
+
+  **5.** Now, we are ready to enter the inputs we defined for the pipeline. Click the Run Settings tab and enter the inputs. Please choose the "Manually" tab and enter the location of the bed file.
+  
 ```
 bedFile:  s3://viascientific/run_data/genome_data/mousetest/mm10/refseq_170804/genes/genes.bed
 ```
 
-**5.** Second, enter the hisat2 index directory. Please use the "Manually" tab. 
+**6.** Second, enter the hisat2 index directory. Please use the "Manually" tab. 
 ```
 Hisat2_Index: s3://viascientific/run_data/genome_data/mousetest/mm10/refseq_170804/Hisat2Index
 ```
 
 #### Creating Collection
-**6.**  To enter Input_Reads, click `Enter File` button. Then go to `Files` Tab and click "Add File" button.
+**7.**  To enter Input_Reads, click `Enter File` button. Then go to `Files` Tab and click "Add File" button.
 
 <img src="images/execute6_add_files.png" width="100%">
 
-**7.**  Enter the location of your files and click **Search button** to get the list of files: 
+**8.**  Enter the location of your files and click **Search button** to get the list of files: 
   
 File Location:
 ```
