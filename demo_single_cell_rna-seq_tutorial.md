@@ -57,9 +57,13 @@ In the `Select/Add Input File` window, (10) select the `Files` tab and then (11)
 
 <p align="center"> <img src="sc-rnaseq_images/select_input.png" width="80%"> </p>
 
-Here if you need to upload your files to AWS S3 please check out the video below:
+***
+
+Here if you need to upload your files to AWS S3, please check out the file upload video below:
 
 https://user-images.githubusercontent.com/33356633/223840766-f00d3205-835c-4685-b10a-866722c489f6.mp4
+
+***
 
 In the `Add File` window, (12) select the `Remote Files` tab and in the `1. File Location` box (13) paste the following path: 
 
