@@ -55,7 +55,7 @@ For each principle component the amount of variation explained and how genes con
 The heatmap in the figure below shows what and how genes contributed to different principle components. Most of these genes in the figure are immune cell type markers, which means that the principle components are capturing differences between immune cell populations. 
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRDR.PCA.png" width="100%"> </p>
 
-### Prinicple component analysis (PCA)
+### tSNE and UMAP
 Although PCA is very helpful and robust in the dimension reduction and generates biologically meaningful results, it is not good enough for the visualization. For visualization the pipeline generates [tSNE](https://lvdmaaten.github.io/tsne) and [UMAP](https://arxiv.org/abs/1802.03426), which is shown in this section.
 
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRDR.TSNE.UMAP.png" width="100%"> </p>
