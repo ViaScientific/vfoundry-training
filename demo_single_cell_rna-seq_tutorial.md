@@ -65,7 +65,7 @@ s3://viafoundry/run_data/test_data/fastq_10x_pbmc_1k_v3
 
 The `Amazon Keys for S3` box should appear. The `Amazon Keys for S3` should automatically set itself to "Via Scientific AWS Key". ```If you prefer to use another AWS Key for another s3 bucket, please change "Amazon Keys for S3" dropdown option.``` 
 
-Click (15) **search button** to see the content of the s3 directory. Leave `2. File Type` as "FASTQ" and in the `3. Collection Type` dropdown, (14) select 'Paired List'. 
+Click (14) **search button** to see the content of the s3 directory. Leave `2. File Type` as "FASTQ" and in the `3. Collection Type` dropdown, (15) select 'Paired List'. 
 
 <p align="center"> <img src="sc-rnaseq_images/add_file1.png" width="80%"> </p>
 
@@ -100,29 +100,32 @@ Metadata can be entered in three ways: Via a path to a file in the cloud, droppi
 Pick the genome by (27) selecting "human_hg38_gencode_v32_cellranger_v6" in the `genome_build` dropdown. 
 
 If you prefer to add custom genome sequence to selected genome_build, enable three inputs:
- - set `run_mkref` to "Yes"
- - set `add_sequences_to_reference` to "Yes"
- - set `run_Download_Genomic Sources` to "Yes"
 
-To supply the new sequences (30) click the wrench in the `add_sequences_to_reference` section.
+ - set `run_mkref` to "Yes" (28)
+ 
+ - set `add_sequences_to_reference` to "Yes" (29)
+
+ - set `run_Download_Genomic Sources` to "Yes" (30)
+
+To supply the new sequences (31) click the wrench in the `add_sequences_to_reference` section.
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs2.png" width="60%"> </p>
 
-In the `Process Settings` window (31) click "Enter File"
+In the `Process Settings` window (32) click "Enter File"
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="60%"> </p>
 
-In the `Enter File` window (32) you can drag and drop your local genome file or enter a s3 path into `File Location`:
+In the `Enter File` window (33) you can drag and drop your local genome file or enter a s3 path into `File Location`:
 
 ```
 s3://viafoundry/run_data/test_data/fasta_EGFP/EGFP.fa
 ```
 
-and (33) click "Save" to return to the `Process Settings` window.
+and (34) click "Save" to return to the `Process Settings` window.
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs4.png" width="80%"> </p>
 
-(34) Click "OK" to submit the changes.
+(35) Click "OK" to submit the changes.
  
 <p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="80%"> </p>
 
@@ -130,7 +133,7 @@ In conclusion, all settings should be set to "yes", except `run_Aggregate_Librar
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs6.png" width="60%"> </p>
 
-Finally, to submit the run (37) click "Run" in the top right and (38) select "Start"
+Finally, to submit the run (36) click "Run" in the top right and (37) select "Start"
 
 <p align="center"> <img src="sc-rnaseq_images/start.png" width="80%"> </p>
 
