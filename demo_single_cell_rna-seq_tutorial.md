@@ -111,7 +111,7 @@ To supply the new sequences (31) click the wrench in the `add_sequences_to_refer
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs2.png" width="60%"> </p>
 
-In the `Process Settings` window (31) click "Enter File"
+In the `Process Settings` window (32) click "Enter File"
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="60%"> </p>
 
