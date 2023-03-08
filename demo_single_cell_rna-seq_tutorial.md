@@ -90,19 +90,19 @@ Under `4. File Pattern`, check that `R1 Pattern` is set to `_R1` and similarly t
 
 (19) Update the 'Name' to `pmbc_1k_v3_S1`. And input `fastq_10x_pbmc_1k_v3` as the `5. Collection Name`. The final three boxes can be left blank. (21) Click "Save Files".
 
-<p align="center"> <img src="sc-rnaseq_images/add_file3.png" width="50%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/add_file3.png" width="70%"> </p>
 
 This will return to the `Change Input File` window. (22) Click "Save" again.
 
-<p align="center"> <img src="sc-rnaseq_images/add_file4.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/add_file4.png" width="75%"> </p>
 
 Since this sample has paired end reads, (23) ensure the `mate` dropdown is set to "pair". To finish the `Metadata` section (24) click "Enter File".
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs1.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs1.png" width="60%"> </p>
 
 Metadata can be entered in three ways: Via a path to a file in the cloud, dropping a local file into the box, or in simple cases directly in the table. Notice the sample name is pulled in from the sample selection. To finish the table (25) fill in the "Condition" column with `pmbc_1k_v3` and (26) click "Save".
 
-<p align="center"> <img src="sc-rnaseq_images/metadata.png" width="60%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/metadata.png" width="70%"> </p>
 
 
 Pick the genome by (27) selecting "human_hg38_gencode_v32_cellranger_v6" in the `genome_build` dropdown. 
@@ -121,7 +121,7 @@ To supply the new sequences (31) click the wrench in the `add_sequences_to_refer
 
 In the `Process Settings` window (32) click "Enter File"
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="60%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="45%"> </p>
 
 In the `Enter File` window (33) you can drag and drop your local genome file or enter a s3 path into `File Location`:
 
@@ -135,7 +135,7 @@ and (34) click "Save" to return to the `Process Settings` window.
 
 (35) Click "OK" to submit the changes.
  
-<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="100%"> </p>
 
 In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_gencode_v32_cellranger_v6".
 
@@ -172,7 +172,7 @@ The cellranger software in the pipeline will generate a count matrix from input 
 ## Filtering Reports
 In this html file the filtering criteria will be shown and the number of cells before and after the filtering will be shown.
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRFilter.png" width="70%"> </p>
-<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRFilter.results.png" width="70%"> </p>
+<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRFilter.results.png" width="50%"> </p>
 
 
 ## Embedding Report
@@ -187,7 +187,7 @@ The heatmap in the figure below shows what and how genes contributed to differen
 ### tSNE and UMAP
 Although PCA is very helpful and robust in the dimension reduction and generates biologically meaningful results, it is not good enough for the visualization. For visualization the pipeline generates [tSNE](https://lvdmaaten.github.io/tsne) and [UMAP](https://arxiv.org/abs/1802.03426), which is shown in this section.
 
-<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRDR.TSNE.UMAP.png" width="70%"> </p>
+<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRDR.TSNE.UMAP.png" width="60%"> </p>
 
 
 
