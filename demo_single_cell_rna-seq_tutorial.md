@@ -65,7 +65,7 @@ s3://viafoundry/run_data/test_data/fastq_10x_pbmc_1k_v3
 
 The `Amazon Keys for S3` box should appear. The `Amazon Keys for S3` should automatically set itself to "Via Scientific AWS Key". ```If you prefer to use another AWS Key for another s3 bucket, please change "Amazon Keys for S3" dropdown option.``` 
 
-Click (15) **search button** to see the content of the s3 directory. Leave `2. File Type` as "FASTQ" and in the `3. Collection Type` dropdown, (14) select 'Paired List'. 
+Click (14) **search button** to see the content of the s3 directory. Leave `2. File Type` as "FASTQ" and in the `3. Collection Type` dropdown, (15) select 'Paired List'. 
 
 <p align="center"> <img src="sc-rnaseq_images/add_file1.png" width="80%"> </p>
 
