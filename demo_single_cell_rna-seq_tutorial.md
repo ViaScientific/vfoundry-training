@@ -133,7 +133,7 @@ In conclusion, all settings should be set to "yes", except `run_Aggregate_Librar
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs6.png" width="60%"> </p>
 
-Finally, to submit the run (37) click "Run" in the top right and (38) select "Start"
+Finally, to submit the run (36) click "Run" in the top right and (37) select "Start"
 
 <p align="center"> <img src="sc-rnaseq_images/start.png" width="80%"> </p>
 
