@@ -112,10 +112,10 @@ In the `Process Settings` window (31) click "Enter File"
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="80%"> </p>
 
-In the `Enter File` window (32) you can drag and drop your local genome file (in fasta format) or enter a s3 path into `File Location`:
+In the `Enter File` window (32) you can drag and drop your local genome file or enter a s3 path into `File Location`:
 
 ```
-/opt/runs/run132/upload/seq.fa
+s3://viafoundry/run_data/test_data/fasta_EGFP/EGFP.fa
 ```
 
 and (33) click "Save" to return to the `Process Settings` window.
@@ -126,7 +126,7 @@ and (33) click "Save" to return to the `Process Settings` window.
  
 <p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="80%"> </p>
 
-To finish the "~ User Inputs ~", (36) set `run_Download_Genomic Sources` to 'yes'. In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_genecode_v32_cellranger_v6".
+In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_gencode_v32_cellranger_v6".
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs6.png" width="80%"> </p>
 
