@@ -110,7 +110,7 @@ To supply the new sequences (30) click the wrench in the `add_sequences_to_refer
 
 In the `Process Settings` window (31) click "Enter File"
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="60%"> </p>
 
 In the `Enter File` window (32) you can drag and drop your local genome file or enter a s3 path into `File Location`:
 
@@ -128,7 +128,7 @@ and (33) click "Save" to return to the `Process Settings` window.
 
 In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_gencode_v32_cellranger_v6".
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs6.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs6.png" width="60%"> </p>
 
 Finally, to submit the run (37) click "Run" in the top right and (38) select "Start"
 
