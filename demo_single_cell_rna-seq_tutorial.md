@@ -82,7 +82,7 @@ Under `4. File Pattern`, check that `R1 Pattern` is set to `_R1` and similarly t
 
 (19) Update the 'Name' to `pmbc_1k_v3_S1`. And input `fastq_10x_pbmc_1k_v3` as the `5. Collection Name`. The final three boxes can be left blank. (21) Click "Save Files".
 
-<p align="center"> <img src="sc-rnaseq_images/add_file3.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/add_file3.png" width="50%"> </p>
 
 This will return to the `Change Input File` window. (22) Click "Save" again.
 
@@ -94,7 +94,7 @@ Since this sample has paired end reads, (23) ensure the `mate` dropdown is set t
 
 Metadata can be entered in three ways: Via a path to a file in the cloud, dropping a local file into the box, or in simple cases directly in the table. Notice the sample name is pulled in from the sample selection. To finish the table (25) fill in the "Condition" column with `pmbc_1k_v3` and (26) click "Save".
 
-<p align="center"> <img src="sc-rnaseq_images/metadata.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/metadata.png" width="60%"> </p>
 
 
 Pick the genome by (27) selecting "human_hg38_gencode_v32_cellranger_v6" in the `genome_build` dropdown. 
@@ -106,7 +106,7 @@ If you prefer to add custom genome sequence to selected genome_build, enable thr
 
 To supply the new sequences (30) click the wrench in the `add_sequences_to_reference` section.
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs2.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs2.png" width="60%"> </p>
 
 In the `Process Settings` window (31) click "Enter File"
 
@@ -120,11 +120,11 @@ s3://viafoundry/run_data/test_data/fasta_EGFP/EGFP.fa
 
 and (33) click "Save" to return to the `Process Settings` window.
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs4.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs4.png" width="60%"> </p>
 
 (34) Click "OK" to submit the changes.
  
-<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="60%"> </p>
 
 In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_gencode_v32_cellranger_v6".
 
