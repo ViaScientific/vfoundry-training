@@ -1,6 +1,8 @@
 Expected learning outcome
 ========
 
+<video src='videos/aws_s3_upload.mp4' width=180/>
+
 To understand the basics of Foundry and run a single-cell RNA-Seq pipeline with sample data.
 
 # Before you start
