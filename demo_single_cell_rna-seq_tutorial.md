@@ -115,13 +115,13 @@ In the `Process Settings` window (32) click "Enter File"
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="60%"> </p>
 
-In the `Enter File` window (32) you can drag and drop your local genome file or enter a s3 path into `File Location`:
+In the `Enter File` window (33) you can drag and drop your local genome file or enter a s3 path into `File Location`:
 
 ```
 s3://viafoundry/run_data/test_data/fasta_EGFP/EGFP.fa
 ```
 
-and (33) click "Save" to return to the `Process Settings` window.
+and (34) click "Save" to return to the `Process Settings` window.
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs4.png" width="80%"> </p>
 
