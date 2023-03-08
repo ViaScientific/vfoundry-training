@@ -150,6 +150,7 @@ Analyzing Reports
 * RNA-Seq pipeline runs typically take 2.5 hours (if you entered custom genome sequence) to complete for this dataset.
 * Navigate to the Log tab and click on log.txt to see progress on your run.
 * Once the blue "Running" in the top right changes to a green "Completed" go to the Report tab to see the final reports.
+* While waiting for the run to finish, you can check the example finalized run: https://www.viafoundry.com/run/101
 
 ## Multiqc
 [multiQC](https://multiqc.info) will aggregate the [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) quality control report of each fastq file in the pipeline. The aggregation of multiple FastQC reports helps users to view the quality control of multiple fastq files easily.
