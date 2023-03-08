@@ -120,11 +120,11 @@ s3://viafoundry/run_data/test_data/fasta_EGFP/EGFP.fa
 
 and (33) click "Save" to return to the `Process Settings` window.
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs4.png" width="60%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs4.png" width="80%"> </p>
 
 (34) Click "OK" to submit the changes.
  
-<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="60%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="80%"> </p>
 
 In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_gencode_v32_cellranger_v6".
 
