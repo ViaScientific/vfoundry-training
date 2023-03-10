@@ -90,19 +90,19 @@ Under `4. File Pattern`, check that `R1 Pattern` is set to `_R1` and similarly t
 
 (19) Update the 'Name' to `pmbc_1k_v3_S1`. And input `fastq_10x_pbmc_1k_v3` as the `5. Collection Name`. The final three boxes can be left blank. (21) Click "Save Files".
 
-<p align="center"> <img src="sc-rnaseq_images/add_file3.png" width="50%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/add_file3.png" width="70%"> </p>
 
 This will return to the `Change Input File` window. (22) Click "Save" again.
 
-<p align="center"> <img src="sc-rnaseq_images/add_file4.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/add_file4.png" width="75%"> </p>
 
 Since this sample has paired end reads, (23) ensure the `mate` dropdown is set to "pair". To finish the `Metadata` section (24) click "Enter File".
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs1.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs1.png" width="60%"> </p>
 
 Metadata can be entered in three ways: Via a path to a file in the cloud, dropping a local file into the box, or in simple cases directly in the table. Notice the sample name is pulled in from the sample selection. To finish the table (25) fill in the "Condition" column with `pmbc_1k_v3` and (26) click "Save".
 
-<p align="center"> <img src="sc-rnaseq_images/metadata.png" width="60%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/metadata.png" width="70%"> </p>
 
 
 Pick the genome by (27) selecting "human_hg38_gencode_v32_cellranger_v6" in the `genome_build` dropdown. 
@@ -121,7 +121,7 @@ To supply the new sequences (31) click the wrench in the `add_sequences_to_refer
 
 In the `Process Settings` window (32) click "Enter File"
 
-<p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="60%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs3.png" width="45%"> </p>
 
 In the `Enter File` window (33) you can drag and drop your local genome file or enter a s3 path into `File Location`:
 
@@ -135,7 +135,7 @@ and (34) click "Save" to return to the `Process Settings` window.
 
 (35) Click "OK" to submit the changes.
  
-<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="80%"> </p>
+<p align="center"> <img src="sc-rnaseq_images/user_inputs5.png" width="100%"> </p>
 
 In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_gencode_v32_cellranger_v6".
 
@@ -147,9 +147,10 @@ Finally, to submit the run (36) click "Run" in the top right and (37) select "St
 
 Analyzing Reports
 ========
-* RNA-Seq pipeline runs typically take 2.5 hours (if you entered custom genome sequence) to complete for this dataset.
+* RNA-Seq pipeline runs typically take 2.5 hours (if you enter custom genome sequence) to complete for this dataset.
 * Navigate to the Log tab and click on log.txt to see progress on your run.
 * Once the blue "Running" in the top right changes to a green "Completed" go to the Report tab to see the final reports.
+* While waiting for the run to finish, you can check the example finalized run: https://www.viafoundry.com/run/101
 
 ## Multiqc
 [multiQC](https://multiqc.info) will aggregate the [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) quality control report of each fastq file in the pipeline. The aggregation of multiple FastQC reports helps users to view the quality control of multiple fastq files easily.
@@ -172,37 +173,37 @@ The cellranger software in the pipeline will generate a count matrix from input 
 ## Filtering Reports
 In this html file the filtering criteria will be shown and the number of cells before and after the filtering will be shown.
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRFilter.png" width="70%"> </p>
-<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRFilter.results.png" width="70%"> </p>
+<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRFilter.results.png" width="50%"> </p>
 
 
 ## Embedding Report
 In this html file the dimension reduction results are shown.
-In the single cell RNA-Seq analysis there are two layers of dimension reduction: Principle component analysis (PCA) and UMAP/tSNE.
+In the single cell RNA-Seq analysis there are two layers of dimension reduction: Principal component analysis (PCA) and UMAP/tSNE.
 ### Prinicple component analysis (PCA)
-Prinicple component analysis (PCA) is used to reduced the dimensionality of the data. The rationale of this analysis is that not all the genes in the scRNA-Seq data are contributing to the variations in gene expression profiles of cells due to the sparsity of data. PCA uses all the genes in the data and constructs a series of artificial dimensions ("principle components") which are linear combination of the gene expression profiles. 
-For each principle component the amount of variation explained and how genes contributed to the principle component are calculated. In the figures below you can see an elbow plot of amount of variation explained: it shows that the amount of variation explained by principle component decreases "exponentially", which means that using the top 15-20 principle components can capture enough differences in the dataset and we can just use these principle components in the downstream analysis.
-The heatmap in the figure below shows what and how genes contributed to different principle components. Most of these genes in the figure are immune cell type markers, which means that the principle components are capturing differences between immune cell populations. 
+Prinicple component analysis (PCA) is used to reduce the dimensionality of the data. The rationale of this analysis is that not all the genes in the scRNA-Seq data are contributing to the variations in gene expression profiles of cells due to the sparsity of data. PCA uses all the genes in the data and constructs a series of artificial dimensions ("Principal components") which are linear combinations of the gene expression profiles. 
+For each Principal component the amount of variation explained and how genes contributed to the Principal component are calculated. In the figures below you can see an elbow plot of amount of variation explained: it shows that the amount of variation explained by Principal component decreases "exponentially", which means that using the top 15-20 Principal components can capture enough differences in the dataset and we can just use these Principal components in the downstream analysis.
+The heatmap in the figure below shows what and how genes contributed to different Principal components. Most of these genes in the figure are immune cell type markers, which means that the Principal components are capturing differences between immune cell populations. 
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRDR.PCA.png" width="70%"> </p>
 
 ### tSNE and UMAP
 Although PCA is very helpful and robust in the dimension reduction and generates biologically meaningful results, it is not good enough for the visualization. For visualization the pipeline generates [tSNE](https://lvdmaaten.github.io/tsne) and [UMAP](https://arxiv.org/abs/1802.03426), which is shown in this section.
 
-<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRDR.TSNE.UMAP.png" width="70%"> </p>
+<p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRDR.TSNE.UMAP.png" width="60%"> </p>
 
 
 
 ## Cluster Reports, Marker Reports and Markers
-Cluster reports and Marker Reports are two html file generated by [Rmarkdown](https://rmarkdown.rstudio.com). The Markers section provided a tsv file of marker genes for each cluster.
+Cluster reports and Marker Reports are two html files generated by [Rmarkdown](https://rmarkdown.rstudio.com). The Markers section provided a tsv file of marker genes for each cluster.
 ### Description
 The unsupervised clustering is used to group cells into populations so users do not need to look at a few thousand cells one at a time. After the clustering, genes that are significantly up and down regulated in each cell population are calculated: these genes can help users to identify the identity of cell populations.
 ### Cluster Reports
 The report will visualize the clustering results, which is shown below.
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRCluster.vis.png" width="70%"> </p>
-Another important visualization is plotting QC metrics of cells against the clustering results. This is to ensure that the clustering results is not significantly biased by the different sequencing depth and coverage of cells in the dataset.
+Another important visualization is plotting QC metrics of cells against the clustering results. This is to ensure that the clustering results are not significantly biased by the different sequencing depth and coverage of cells in the dataset.
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRCluster.QC.png" width="70%"> </p>
 
 ### Marker Reports
-In this section the up-regulated genes in each cell population defined by clustering algorithm are visualized using heatmap. The figure below is an example of such heatmap.
+In this section the up-regulated genes in each cell population defined by clustering algorithm are visualized using heatmap. The figure below is an example of such a heatmap.
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRCluster.Markers.png" width="70%"> </p>
 
 ### Markers
@@ -212,7 +213,7 @@ In this section the full list of gene markers of each cell population is ready t
 
 ## Singler Rmd Report
 Singler Rmd Report and Marker Reports is a html file generated by [Rmarkdown](https://rmarkdown.rstudio.com). 
-[SingleR](https://doi.org/10.1038/s41590-018-0276-y) is an algorithm that annotate single cell RNA-Seq dataset based on gene markers of each cell population from clustering and a corresponding reference map. In this section the results of this SingleR annotation are shown.
+[SingleR](https://doi.org/10.1038/s41590-018-0276-y) is an algorithm that annotates single cell RNA-Seq dataset based on gene markers of each cell population from clustering and a corresponding reference map. In this section the results of this SingleR annotation are shown.
 <p align="center"> <p align="center"> <img src="sc-rnaseq_images/ResultsRSingleR.png" width="70%"> </p>
 
 ## Annot Out, Seurat H5ad and Shinyapp
