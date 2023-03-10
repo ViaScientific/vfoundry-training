@@ -152,6 +152,22 @@ Analyzing Reports
 * Once the blue "Running" in the top right changes to a green "Completed" go to the Report tab to see the final reports.
 * While waiting for the run to finish, you can check the example finalized run: https://www.viafoundry.com/run/101
 
+***
+
+## Executing scRNA Seurat 10x Module (Optional)
+* Instead of running whole 10x pipeline, you might execute only scRNA Seurat 10x Module too. This module would take 10 minutes to run.
+1. Go to your `new project` by clicking on the `Projects` drop down on the top menu and clicking on your `new project`.
+2. Click `Pipeline Tab` and click `Add Pipeline` Button.
+3. In the `Add pipeline` window, click the `Add` button for the `scRNA Seurat 10x` and close the window. 
+4. Click the `Run` button of the `scRNA Seurat 10x` on the table.
+5. Choose Run Environment as `Via Run Environment (AWS Batch)`
+6. Choose genome_build as `human_hg38_gencode_v32_cellranger_v6`
+7. Click `Enter File` for Metadata. Fill in the "Sample" column with "pbmc_1k_v3_S1" and "Condition" column with `pmbc_1k_v3` click "Save".
+8. Enter 101 for Data_Path which is the already finished 10x pipeline run id.
+9. Click Run Button at the top right.
+
+***
+
 ## Multiqc
 [multiQC](https://multiqc.info) will aggregate the [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) quality control report of each fastq file in the pipeline. The aggregation of multiple FastQC reports helps users to view the quality control of multiple fastq files easily.
 
