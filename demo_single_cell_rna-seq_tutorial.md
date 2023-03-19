@@ -107,6 +107,10 @@ Metadata can be entered in three ways: Via a path to a file in the cloud, droppi
 
 Pick the genome by (27) selecting "human_hg38_gencode_v32_cellranger_v6" in the `genome_build` dropdown. 
 
+***
+
+**Optional: Adding custom genome sequence to selected genome_build**
+
 If you prefer to add custom genome sequence to selected genome_build, enable three inputs:
 
  - set `run_mkref` to "Yes" (28)
@@ -114,6 +118,11 @@ If you prefer to add custom genome sequence to selected genome_build, enable thr
  - set `add_sequences_to_reference` to "Yes" (29)
 
  - set `run_Download_Genomic Sources` to "Yes" (30)
+
+```
+* Note: This change will add approx. 1 hour to run time since it will build new indexes with entered custom sequences. 
+If you select no to these inputs it will use prebuilt indexes. 
+```
 
 To supply the new sequences (31) click the wrench in the `add_sequences_to_reference` section.
 
@@ -140,6 +149,8 @@ and (34) click "Save" to return to the `Process Settings` window.
 In conclusion, all settings should be set to "yes", except `run_Aggregate_Libraries` and `genome_build` which was set to "human_hg38_gencode_v32_cellranger_v6".
 
 <p align="center"> <img src="sc-rnaseq_images/user_inputs6.png" width="60%"> </p>
+
+***
 
 Finally, to submit the run (36) click "Run" in the top right and (37) select "Start"
 
