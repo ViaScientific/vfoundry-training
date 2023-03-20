@@ -119,12 +119,25 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 | id          | NamingPattern          | ```F-${AUTOINCREMENT}```  | ```${file.name}```    | 
 
 
+16. Now we're ready to insert metadata. Click on "Data View" Button. 
 
+17. Click Collections Tab and select Series Collection from dropdown. Click Insert button to enter `PRJNA807693` into name field using form. After that click save button.
+18. Go to collection dropdown and change its value to `Biosamples`. Click `Download Last Viewed Page as Excel file` button. You will see empty excel sheet with table headers. 
 
+<img src="metadata_geo_images/geo_download_button.png" width="50%">
+<img src="metadata_geo_images/geo_empty_biosamples.png" width="99%">
 
+19. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
+<img src="metadata_geo_images/geo_filled_biosamples.png" width="99%">
 
+20. Go to collection dropdown and change its value to `Samples`. Click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
+<img src="metadata_geo_images/geo_filled_samples.png" width="99%">
+
+21. Go to collection dropdown and change its value to `Samples`. Click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
+
+<img src="metadata_geo_images/geo_filled_files.png" width="99%">
 
 
 Congratulations! You have configured metadata tracker for your project and imported GEO data into foundry!
