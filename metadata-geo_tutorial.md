@@ -10,17 +10,41 @@ Please go to https://www.viafoundry.com and login into your account. If you have
 Creating a Run
 ========
 
-Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. This is the place to configure your project. To add metadata tracker to this project click `Metadata Tracker` icon. This will create `Metadata` tab. 
+Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. Enter your project name and click OK. This is the place to configure your project. Click on the `Add Metadata Tracker` icon to add new `Metadata` tab into your project. 
 
-<img src="rnaseq_images/addpipeline1.png" width="99%">
+<img src="metadata_geo_images/geo1.png" width="99%">
 
-1. Click on `Add` button on "RNA-Seq Pipeline" and close the window. 
+1. Click on `Metadata` tab. This window is the `Data View` section of the Metadata tracker where you will insert your data. Before inserting new data, we need to configure the database structure. To start configuring click on "Configure Metadata" button at the right. 
 
-<img src="rnaseq_images/addpipeline2.png" width="99%">
+<img src="metadata_geo_images/geo2.png" width="99%">
 
-2. Now click `Run` button of the pipeline on the table.
+2. In this configuration window there are couple of tabs available.
+   - All Collections: List of project collections(tables).
+   - All Events: List of events that are defined for Data view.
+   - Tree View: Shows your project collections(tables) in tree visualization.
+   - Templates: Predefined collections templates to import into your project
 
-<img src="rnaseq_images/addpipeline3.png" width="99%">
+<img src="metadata_geo_images/geo3.png" width="99%">
+
+3. Please click `Templates` tab to import predefined collections. Select all the collections by clicking checkboxes. After choosing them, click `Import Collection` Button.
+
+<img src="metadata_geo_images/geo4.png" width="99%">
+
+
+4. Now you can revisit `All Collections` and `Tree View` Tabs to see imported collection and their relationships.
+
+<img src="metadata_geo_images/geo5.png" width="99%">
+<img src="metadata_geo_images/geo6.png" width="99%">
+
+5. Let visit NCBI SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to download sample project metadata. Enter `GSE196908` into `Accession` field and click search button.
+
+<img src="metadata_geo_images/geo7ncbi.png" width="99%">
+
+6. Click on the `Metadata` button to download comma separated metadata file. 
+<img src="metadata_geo_images/geo8ncbi.png" width="99%">
+
+
+
 
 3. Run page will be loaded. Under Run Environment, select "Via Demo Environment(AWS Batch)"
 4. Under User Inputs, next to `reads`, click `Enter File`
