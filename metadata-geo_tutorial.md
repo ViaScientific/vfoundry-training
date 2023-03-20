@@ -54,11 +54,9 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 
 9. Lets distribute these column headers into 4 groups (series, biosamples, samples, file) to save into our project.
 
-
-
 | series      | biosamples        | samples        |  files    |
-| :----:      |    :----:         |         :----: |      :----: |
-| BioProject  | BioSample         | Sample Name    |Run   |
+| :----:      |    :----:         |    :----:      |  :----:   |
+| BioProject  | BioSample         | Sample Name    |    Run    |
 |             | Organism          | Assay Type     |    |
 |             | source_name       | Library Name   |   |
 |             | TREATMENT         | LibraryLayout      |   |
@@ -66,6 +64,61 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 |             |                   | LibrarySource     |    |
 |             |                   | Instrument     |    |
 |             |                   | Platform       |    |
+
+
+10. Return back to Foundry Metadata tracker, and click the Series tab. Change the `NamingPattern` of `id` column:
+
+| Column      | Field of change        | Old Value        |  New Value        | 
+| :----:      |    :----:              |    :----:      |   :----:      | 
+| id          | NamingPattern          | ```SE-${AUTOINCREMENT}```  | ```${series.name}```    |  
+
+
+11. Click Biosamples Tab and change the `NamingPattern` of `id` column as follows: 
+
+| Column      | Field of change        | Old Value        |  New Value        | 
+| :----:      |    :----:              |    :----:      |   :----:      | 
+| id          | NamingPattern          | ```B-${AUTOINCREMENT}```  | ```${biosamp.name}```    |  
+
+12. Insert new columns by clicking plus button at the top left.
+
+| New Column Name      | New Column Label       | 
+| :----:      |    :----:              |    
+| BioSample          | BioSample          | 
+| Organism          | Organism          | 
+| source_name          | source_name          | 
+| TREATMENT          | TREATMENT          | 
+| weeks_treatment          | weeks_treatment          | 
+
+
+
+
+
+13. Click Samples Tab and change the `NamingPattern` of `id` column as follows: 
+
+| Column      | Field of change        | Old Value        |  New Value        | 
+| :----:      |    :----:              |    :----:      |   :----:      | 
+| id          | NamingPattern          | ```SA-${AUTOINCREMENT}```  | ```${sample.name}```    |  
+
+14. Insert new columns by clicking plus button at the top left.
+
+| New Column Name      | New Column Label       | 
+| :----:      |    :----:              |    
+| Sample Name           | Sample Name           | 
+| Assay Type            | Assay Type            | 
+| LibraryLayout          | LibraryLayout          | 
+| LibrarySelection          | LibrarySelection          | 
+| LibrarySource          | LibrarySource          | 
+| Instrument          | Instrument          | 
+| Platform          | Platform          | 
+
+
+15. Click Samples Tab and change the `NamingPattern` of `id` column as follows: 
+
+| Column      | Field of change        | Old Value        |  New Value        | 
+| :----:      |    :----:              |    :----:      |   :----:      | 
+| id          | NamingPattern          | ```F-${AUTOINCREMENT}```  | ```${file.name}```    | 
+
+
 
 
 
