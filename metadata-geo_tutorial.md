@@ -1,16 +1,16 @@
 Expected learning outcome
 ========
 
-To understand the basics of Foundry, and do RNA-Seq analysis with sample mouse data.
+To understand the basics of Metadata Tracking System, and import sample GEO metadata.
 
 # Before you start
 
-Please go to https://dev.viafoundry.net and login into your account. If you have an issue about login, please let us know about it (support@viascientific.com). We will set an account for you.
+Please go to https://www.viafoundry.com and login into your account. If you have an issue about login, please let us know about it (support@viascientific.com). We will set an account for you.
 
 Creating a Run
 ========
 
-Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. This is the place to configure your project. To access pipelines, click `Pipelines` tab and then click `Add Pipeline` button. 
+Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. This is the place to configure your project. To add metadata tracker to this project click `Metadata Tracker` icon. This will create `Metadata` tab. 
 
 <img src="rnaseq_images/addpipeline1.png" width="99%">
 
