@@ -43,51 +43,35 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 6. Click on the `Metadata` button to download comma separated metadata file. 
 <img src="metadata_geo_images/geo8ncbi.png" width="99%">
 
+7. To visualize the file in excel or another spreadsheet viewer, change the file extension to csv.
+   ``` 
+   SraRunTable.txt -> SraRunTable.csv
+   ```
+
+8. Open the file to check its content.
+
+<img src="metadata_geo_images/geo9ncbi.png" width="99%">
+
+9. Lets distribute these column headers into 4 groups (series, biosamples, samples, file) to save into our project.
 
 
 
-3. Run page will be loaded. Under Run Environment, select "Via Demo Environment(AWS Batch)"
-4. Under User Inputs, next to `reads`, click `Enter File`
-5. Click `Add File` button to enter new files.
-6. Next to "1. File Location", enter:
-```
-s3://viascientific/run_data/test_data/fastq_mouse
-```
-7. and click the magnifying glass icon. The box below should populate with files like so:
+| series      | biosamples        | samples        |  files    |
+| :----:      |    :----:         |         :----: |      :----: |
+| BioProject  | BioSample         | Sample Name    |Run   |
+|             | Organism          | Assay Type     |    |
+|             | source_name       | Library Name   |   |
+|             | TREATMENT         | LibraryLayout      |   |
+|             | weeks_treatment   | LibrarySelection      |    |
+|             |                   | LibrarySource     |    |
+|             |                   | Instrument     |    |
+|             |                   | Platform       |    |
 
-<img src="rnaseq_images/addfiles1.png" width="99%">
 
-8. Next to `3. Collection Type`, choose `Paired List`
-9. Under `4. File Pattern`, next to `Forward Pattern`, type `.1`. Similarly,  type `.2` for `Reverse Pattern`.
 
-<img src="rnaseq_images/addfiles2.png" width="99%">
 
-10. Click `Add All Files` button. You should now see 6 entries below.
 
-<img src="rnaseq_images/addfiles3.png" width="99%">
 
-11. Next to `5. Collection Name`, type `rna-seq mousetest paired` and Click `Save Files`
-12. On the "Select/Add Input File" screen which should now have 6 entries, click "Save".
-13. For "mate", choose "pair"
-14. For genome_build, choose "mousetest"
-15. Leave the rest as defaults
-16. Click Run in the top right. RNA-Seq pipeline runs typically take several minutes to complete for this dataset.
-17. Navigate to the Log tab and click on log.txt to see progress on your run.
-18. Once the blue "Running" in the top right changes to a green "Completed" go to the Report tab to see the final reports.
-19. Click on MulitiQC, and scroll to find this plot, which shows aligned reads per library:
 
-<img src="rnaseq_images/report1.png" width="99%">
 
-20. Click on Summary to check mapping rates:
-
-<img src="rnaseq_images/report2.png" width="99%">
-
-21. Click on RSEM Summary to download count table:
-
-<img src="rnaseq_images/report3.png" width="99%">
-
-22. Click on DEBrowser to do Differential Expression Analysis.
-
-<img src="rnaseq_images/report4.png" width="99%">
-
-Congratulations! You have run and tested a RNA-Seq pipeline on Foundry!
+Congratulations! You have configured metadata tracker for your project and imported GEO data into foundry!
