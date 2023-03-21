@@ -164,19 +164,19 @@ Note: `BioSample` column in SraRunTable is copied to `Name` column.
 
 21. After saving this file, click on `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click `Load Table` button.
 
-<img src="metadata_geo_images/geo_load_table1.png" width="50%">
+<img src="metadata_geo_images/geo_load_table1.png" width="99%">
 
 22. It will show the rows that are going to be inserted/updated in yellow color. Click Save button at the top left.
 
-<img src="metadata_geo_images/geo_load_table2.png" width="50%">
+<img src="metadata_geo_images/geo_load_table2.png" width="99%">
 
 23. It will insert the rows as follows and status of the operation will be shown at the left side.
 
-<img src="metadata_geo_images/geo_load_table3.png" width="50%">
+<img src="metadata_geo_images/geo_load_table3.png" width="99%">
 
 24. Now you can return to table view by clicking the button below:
 
-<img src="metadata_geo_images/geo_load_table4.png" width="50%"> 
+<img src="metadata_geo_images/geo_load_table4.png" width="99%"> 
 
 25. Switch to `Samples` collection by using collection dropdown. Similar to biosamples collection, click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
