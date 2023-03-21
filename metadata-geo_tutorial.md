@@ -154,7 +154,7 @@ Importing Metadata
 <img src="metadata_geo_images/geo_download_button.png" width="50%">
 <img src="metadata_geo_images/geo_empty_biosamples.png" width="99%">
 
-19. Copy and paste the data in SraRunTable into this empty sheet as follows:
+20. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
 <img src="metadata_geo_images/geo_filled_biosamples.png" width="99%">
 
@@ -162,23 +162,23 @@ Importing Metadata
 Note: `BioSample` column in SraRunTable is copied to `Name` column.
 ```
 
-20. After saving this file, click on `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click `Load Table` button.
+21. After saving this file, click on `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click `Load Table` button.
 
 <img src="metadata_geo_images/geo_load_table1.png" width="50%">
 
-21. It will show the rows that are going to be inserted/updated in yellow color. Click Save button at the top left.
+22. It will show the rows that are going to be inserted/updated in yellow color. Click Save button at the top left.
 
 <img src="metadata_geo_images/geo_load_table2.png" width="50%">
 
-21. It will insert the rows as follows and status of the operation will be shown at the left side.
+23. It will insert the rows as follows and status of the operation will be shown at the left side.
 
 <img src="metadata_geo_images/geo_load_table3.png" width="50%">
 
-22. Now you can return to table view by clicking the button below:
+24. Now you can return to table view by clicking the button below:
 
 <img src="metadata_geo_images/geo_load_table4.png" width="50%"> 
 
-23. Switch to `Samples` collection by using collection dropdown. Similar to biosamples collection, click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
+25. Switch to `Samples` collection by using collection dropdown. Similar to biosamples collection, click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
 <img src="metadata_geo_images/geo_filled_samples.png" width="99%">
 
@@ -186,7 +186,9 @@ Note: `BioSample` column in SraRunTable is copied to `Name` column.
 Note: `Sample Name` column in SraRunTable is copied to `Name` column.
 ```
 
-21. Go to collection dropdown and change its value to `Samples`. Click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
+26. After saving this file, click on `Import on Excel File` button. Drag and drop your Samples.xlsx file and click `Load Table` button. Now you're ready to import sample data with save button. Return back to table view by clicking `Show Table Format` button.
+
+27. Go to collection dropdown and change its value to `Files`. Click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
 <img src="metadata_geo_images/geo_filled_files.png" width="99%">
 
