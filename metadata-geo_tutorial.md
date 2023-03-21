@@ -7,7 +7,16 @@ To understand the basics of Metadata Tracking System, and import sample GEO meta
 
 Please go to https://www.viafoundry.com and login into your account. If you have an issue about login, please let us know about it (support@viascientific.com). We will set an account for you.
 
-Creating a Run
+Overview
+========
+  * [Creating Project and Adding Metadata Tracker](#creating-project-and-adding-metadata-tracker)
+  * [Configuring Metadata Tracker](#configuring-metadata-tracker)
+  * [Importing Metadata](#importing-metadata)
+  * [Basic Commands](#basic-commands)
+  * [File transfer from your laptop to cluster using FileZilla](#file-transfer-from-your-laptop-to-cluster-using-FileZilla)
+  * [Session1 Homework](#session1-homework)
+
+Creating Project and Adding Metadata Tracker
 ========
 
 Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. Enter your project name and click OK. This is the place to configure your project. Click on the `Add Metadata Tracker` icon to add new `Metadata` tab into your project. 
@@ -17,6 +26,9 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 1. Click on `Metadata` tab. This window is the `Data View` section of the Metadata tracker where you will insert your data. Before inserting new data, we need to configure the database structure. To start configuring click on "Configure Metadata" button at the right. 
 
 <img src="metadata_geo_images/geo2.png" width="99%">
+
+Configuring Metadata Tracker
+========
 
 2. In this configuration window there are couple of tabs available.
    - All Collections: List of project collections(tables).
@@ -66,14 +78,14 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 |             |                   | Platform       |    |
 
 
-10. Return back to Foundry Metadata tracker, and click the Series tab. Change the `NamingPattern` of `id` column:
+10. Return back to Foundry Metadata tracker, and click the Series tab. To use `name` column as identifier, change the `NamingPattern` of `id` column as follows:
 
 | Column      | Field of change        | Old Value        |  New Value        | 
 | :----:      |    :----:              |    :----:      |   :----:      | 
 | id          | NamingPattern          | ```SE-${AUTOINCREMENT}```  | ```${series.name}```    |  
 
 
-11. Click Biosamples Tab and change the `NamingPattern` of `id` column as follows: 
+11. Similarly, to make `name` column a identifier for biosamples, click on Biosamples Tab and change the `NamingPattern` of `id` column as follows: 
 
 | Column      | Field of change        | Old Value        |  New Value        | 
 | :----:      |    :----:              |    :----:      |   :----:      | 
@@ -83,15 +95,18 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 
 | New Column Name      | New Column Label       | 
 | :----:      |    :----:              |    
-| BioSample          | BioSample          | 
 | Organism          | Organism          | 
 | source_name          | source_name          | 
 | TREATMENT          | TREATMENT          | 
 | weeks_treatment          | weeks_treatment          | 
 
+Enter new name and label values using the table above and click save button. You can see the example for `Organism` column below.
 
+<img src="metadata_geo_images/geo_insert_organism.png" width="99%">
 
+This should create the following database structure:
 
+<img src="metadata_geo_images/geo_biosample_columns.png" width="99%">
 
 13. Click Samples Tab and change the `NamingPattern` of `id` column as follows: 
 
@@ -99,11 +114,10 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 | :----:      |    :----:              |    :----:      |   :----:      | 
 | id          | NamingPattern          | ```SA-${AUTOINCREMENT}```  | ```${sample.name}```    |  
 
-14. Insert new columns by clicking plus button at the top left.
+14. Insert new columns by clicking plus button at the top left. Enter new name and label values using the table below.
 
 | New Column Name      | New Column Label       | 
 | :----:      |    :----:              |    
-| Sample Name           | Sample Name           | 
 | Assay Type            | Assay Type            | 
 | LibraryLayout          | LibraryLayout          | 
 | LibrarySelection          | LibrarySelection          | 
@@ -111,8 +125,11 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 | Instrument          | Instrument          | 
 | Platform          | Platform          | 
 
+Expected database structure of sample collection:
 
-15. Click Samples Tab and change the `NamingPattern` of `id` column as follows: 
+<img src="metadata_geo_images/geo_sample_columns.png" width="99%">
+
+15. Click Files Tab and change the `NamingPattern` of `id` column as follows: 
 
 | Column      | Field of change        | Old Value        |  New Value        | 
 | :----:      |    :----:              |    :----:      |   :----:      | 
@@ -121,8 +138,18 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 
 16. Now we're ready to insert metadata. Click on "Data View" Button. 
 
-17. Click Collections Tab and select Series Collection from dropdown. Click Insert button to enter `PRJNA807693` into name field using form. After that click save button.
-18. Go to collection dropdown and change its value to `Biosamples`. Click `Download Last Viewed Page as Excel file` button. You will see empty excel sheet with table headers. 
+Importing Metadata
+========
+
+17. Click `Collections` Tab and select `Series` Collection from dropdown. 
+
+<img src="metadata_geo_images/geo_data1.png" width="99%">
+
+18. Click on `Insert` button to enter `PRJNA807693` into name field using form. After that click save button. 
+
+<img src="metadata_geo_images/geo_data2.png" width="99%">
+
+19. Go to collection dropdown and change its value to `Biosamples`. Click `Download Last Viewed Page as Excel file` button. You will see empty excel sheet with table headers. 
 
 <img src="metadata_geo_images/geo_download_button.png" width="50%">
 <img src="metadata_geo_images/geo_empty_biosamples.png" width="99%">
@@ -131,9 +158,33 @@ Once logged in, click on the `Projects` section at the top menu and click `Add a
 
 <img src="metadata_geo_images/geo_filled_biosamples.png" width="99%">
 
-20. Go to collection dropdown and change its value to `Samples`. Click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
+```
+Note: `BioSample` column in SraRunTable is copied to `Name` column.
+```
+
+20. After saving this file, click on `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click `Load Table` button.
+
+<img src="metadata_geo_images/geo_load_table1.png" width="50%">
+
+21. It will show the rows that are going to be inserted/updated in yellow color. Click Save button at the top left.
+
+<img src="metadata_geo_images/geo_load_table2.png" width="50%">
+
+21. It will insert the rows as follows and status of the operation will be shown at the left side.
+
+<img src="metadata_geo_images/geo_load_table3.png" width="50%">
+
+22. Now you can return to table view by clicking the button below:
+
+<img src="metadata_geo_images/geo_load_table4.png" width="50%"> 
+
+23. Switch to `Samples` collection by using collection dropdown. Similar to biosamples collection, click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
 <img src="metadata_geo_images/geo_filled_samples.png" width="99%">
+
+```
+Note: `Sample Name` column in SraRunTable is copied to `Name` column.
+```
 
 21. Go to collection dropdown and change its value to `Samples`. Click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
