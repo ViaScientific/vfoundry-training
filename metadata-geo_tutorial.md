@@ -159,7 +159,7 @@ Importing Metadata
 
 <img src="metadata_geo_images/geo_data2.png" width="99%">
 
-19. Go to the collection dropdown and change its value to `Biosamples`. Since we will insert 99 Biosamples we will use excel import. Let's download the template excel file to facilitate import. Click the `Download Last Viewed Page as Excel file` button. You will see an empty excel sheet with table headers. 
+19. Go to the collection dropdown and change its value to `Biosamples`. Since we will insert 99 Biosamples we will use excel import. Let's download the template excel file to facilitate import. Click the `Download Last Viewed Page as Excel file` button. You will see an empty excel sheet with table headers. If you like you can <a href="metadata_geo_files/Biosamples_template.xlsx?raw=true" download="Biosamples_template.xlsx">download the biosamples template here.</a>
 
 <img src="metadata_geo_images/geo_download_button.png" width="50%">
 <img src="metadata_geo_images/geo_empty_biosamples.png" width="99%">
@@ -172,7 +172,7 @@ Importing Metadata
 Note: `BioSample` column in SraRunTable is copied to the `Name` column.
 ```
 
-21. After saving this file, click on the `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click the `Load Table` button.
+21. If you prefer you can <a href="metadata_geo_files/Biosamples_template.xlsx?raw=true" download="Biosamples_template.xlsx">download the filled biosamples table here.</a> After saving this file, click on the `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click the `Load Table` button.
 
 <img src="metadata_geo_images/geo_load_table1.png" width="99%">
 
