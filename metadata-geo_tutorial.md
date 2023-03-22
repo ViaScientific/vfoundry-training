@@ -210,6 +210,8 @@ Note: `Sample Name` column in SraRunTable is copied to the `Name` column.
 - Inputs: Click `Select File` Button and use checkboxes to select your files.
 - You can change other input values according to your needs.
 
+<img src="metadata_geo_images/geo_run.png" width="99%">
+
 29. Click the save button. This will submit your run. You can track your run status on the dashboard.
 
 Congratulations! You have configured a metadata tracker for your project and imported GEO data into the foundry!
