@@ -58,7 +58,7 @@ Configuring Metadata Tracker
 
 <img src="metadata_geo_images/geo6.png" width="99%">
 
-5. Let visit NCBI SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to download sample project metadata. Enter `GSE196908` into the `Accession` field and click the search button.
+5. Let's visit NCBI SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to download sample project metadata. Enter `GSE196908` into the `Accession` field and click the search button.
 
 <img src="metadata_geo_images/geo7ncbi.png" width="99%">
 
@@ -215,6 +215,6 @@ Note: `Sample Name` column in SraRunTable is copied to the `Name` column.
 
 29. Click the save button. This will submit your run. You can track your run status on the dashboard.
 
-Congratulations! You have configured a metadata tracker for your project and imported GEO data into the foundry!
+Congratulations! You have configured a metadata tracker for your project and imported GEO data into Foundry!
 
 
