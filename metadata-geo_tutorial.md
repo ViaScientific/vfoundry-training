@@ -12,47 +12,56 @@ Overview
   * [Creating Project and Adding Metadata Tracker](#creating-project-and-adding-metadata-tracker)
   * [Configuring Metadata Tracker](#configuring-metadata-tracker)
   * [Importing Metadata](#importing-metadata)
-  * [Basic Commands](#basic-commands)
-  * [File transfer from your laptop to cluster using FileZilla](#file-transfer-from-your-laptop-to-cluster-using-FileZilla)
-  * [Session1 Homework](#session1-homework)
 
 Creating Project and Adding Metadata Tracker
 ========
 
-Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. Enter your project name and click OK. This is the place to configure your project. Click on the `Add Metadata Tracker` icon to add new `Metadata` tab into your project. 
+Once logged in, click on the `Projects` section at the top menu and click `Add a New Project` button. Enter your project name and click OK. This is the place to configure your project. Click on the `Add Metadata Tracker` icon to add a new `Metadata` tab into your project. 
 
 <img src="metadata_geo_images/geo1.png" width="99%">
 
-1. Click on `Metadata` tab. This window is the `Data View` section of the Metadata tracker where you will insert your data. Before inserting new data, we need to configure the database structure. To start configuring click on "Configure Metadata" button at the right. 
+1. Click on the `Metadata` tab. This window is the `Data View` section of the Metadata tracker where you will insert your data. Before inserting new data, we need to configure the database structure. To start configuring click on the "Configure Metadata" button at the right. 
 
 <img src="metadata_geo_images/geo2.png" width="99%">
 
 Configuring Metadata Tracker
 ========
 
-2. In this configuration window there are couple of tabs available.
+2. In this configuration window there are a couple of tabs available.
    - All Collections: List of project collections(tables).
    - All Events: List of events that are defined for Data view.
    - Tree View: Shows your project collections(tables) in tree visualization.
-   - Templates: Predefined collections templates to import into your project
+   - Templates: Predefined collections to import into your project
 
 <img src="metadata_geo_images/geo3.png" width="99%">
 
-3. Please click `Templates` tab to import predefined collections. Select all the collections by clicking checkboxes. After choosing them, click `Import Collection` Button.
+3. Please click the `Templates` tab to import predefined collections. Select all the collections by clicking checkboxes. After choosing them, click the `Import Collection` Button.
 
 <img src="metadata_geo_images/geo4.png" width="99%">
 
 
-4. Now you can revisit `All Collections` and `Tree View` Tabs to see imported collection and their relationships.
+4a. Now you can revisit `All Collections` and `Tree View` Tabs to see imported collections and their relationships.
 
 <img src="metadata_geo_images/geo5.png" width="99%">
+
+4b. If you click each `Series` tab, you will see the columns defined for the `Series` collection. The NamingPattern feature is defined for the id column to set a unique id for each inserted value. Since the pattern is `SE-${AUTOINCREMENT}`, new data will have the following ids: SE-1, SE-2, etc.
+
+<img src="metadata_geo_images/series_columns.png" width="99%">
+
+
+4c. Now click on the `Biosamples` tab to see its columns. Type of the series_id column is `mongoose.Schema.ObjectId` which means that this value will be referencing data in another collection. If you scroll to the right, you will see the ref column is set to `{yourProjectID}_series`, therefore it is referencing data in series collection in this project. By using this referencing method, we don't need to enter series details each time we insert data into the `Biosamples` collection. Instead, we will reference the data in the `Series` collection.
+
+<img src="metadata_geo_images/biosamples_columns.png" width="99%">
+
+4d. Similarly `Samples` collection referencing data in `Biosamples` collection and `Files` collection referencing `Samples` collection. You can visualize their relationship in the `Tree View` tab.
+
 <img src="metadata_geo_images/geo6.png" width="99%">
 
-5. Let visit NCBI SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to download sample project metadata. Enter `GSE196908` into `Accession` field and click search button.
+5. Let visit NCBI SRA Run Selector (https://www.ncbi.nlm.nih.gov/Traces/study/) to download sample project metadata. Enter `GSE196908` into the `Accession` field and click the search button.
 
 <img src="metadata_geo_images/geo7ncbi.png" width="99%">
 
-6. Click on the `Metadata` button to download comma separated metadata file. 
+6. Click on the `Metadata` button to download comma separated metadata files. 
 <img src="metadata_geo_images/geo8ncbi.png" width="99%">
 
 7. To visualize the file in excel or another spreadsheet viewer, change the file extension to csv.
@@ -64,7 +73,7 @@ Configuring Metadata Tracker
 
 <img src="metadata_geo_images/geo9ncbi.png" width="99%">
 
-9. Lets distribute these column headers into 4 groups (series, biosamples, samples, file) to save into our project.
+9. Lets distribute these column headers into 4 groups (series, biosamples, samples, file) to prevent repetition and save into our project.
 
 | series      | biosamples        | samples        |  files    |
 | :----:      |    :----:         |    :----:      |  :----:   |
@@ -78,7 +87,7 @@ Configuring Metadata Tracker
 |             |                   | Platform       |    |
 
 
-10. Return back to Foundry Metadata tracker, and click the Series tab. To use `name` column as identifier, change the `NamingPattern` of `id` column as follows:
+10. Return back to Foundry Metadata tracker, and click the Series tab. Instead of auto increment values (SE-1, SE-2 etc,) using BioProject-ID for referencing would simplify our referencing strategy. While entering data, we will enter BioProject-ID into the name column and we want to save this entered value as `id`. Change the `NamingPattern` of `id` column as follows to save `name` value as `id`:
 
 | Column      | Field of change        | Old Value        |  New Value        | 
 | :----:      |    :----:              |    :----:      |   :----:      | 
@@ -91,7 +100,7 @@ Configuring Metadata Tracker
 | :----:      |    :----:              |    :----:      |   :----:      | 
 | id          | NamingPattern          | ```B-${AUTOINCREMENT}```  | ```${biosamp.name}```    |  
 
-12. Insert new columns by clicking plus button at the top left.
+12. Insert new columns by clicking the plus button at the top left.
 
 | New Column Name      | New Column Label       | 
 | :----:      |    :----:              |    
@@ -100,7 +109,7 @@ Configuring Metadata Tracker
 | TREATMENT          | TREATMENT          | 
 | weeks_treatment          | weeks_treatment          | 
 
-Enter new name and label values using the table above and click save button. You can see the example for `Organism` column below.
+Enter new name and label values using the table above and click save button. You can see the example for the `Organism` column below.
 
 <img src="metadata_geo_images/geo_insert_organism.png" width="99%">
 
@@ -114,7 +123,7 @@ This should create the following database structure:
 | :----:      |    :----:              |    :----:      |   :----:      | 
 | id          | NamingPattern          | ```SA-${AUTOINCREMENT}```  | ```${sample.name}```    |  
 
-14. Insert new columns by clicking plus button at the top left. Enter new name and label values using the table below.
+14. Insert new columns by clicking the plus button at the top left. Enter new name and label values using the table below.
 
 | New Column Name      | New Column Label       | 
 | :----:      |    :----:              |    
@@ -136,20 +145,20 @@ Expected database structure of sample collection:
 | id          | NamingPattern          | ```F-${AUTOINCREMENT}```  | ```${file.name}```    | 
 
 
-16. Now we're ready to insert metadata. Click on "Data View" Button. 
+16. Now we're ready to insert metadata. Click on the "Data View" Button. 
 
 Importing Metadata
 ========
 
-17. Click `Collections` Tab and select `Series` Collection from dropdown. 
+17. Click the `Collections` Tab and select `Series` Collection from dropdown. 
 
 <img src="metadata_geo_images/geo_data1.png" width="99%">
 
-18. Click on `Insert` button to enter `PRJNA807693` into name field using form. After that click save button. 
+18. Click on the `Insert` button to enter `PRJNA807693` into the name field using form. After that click the save button. 
 
 <img src="metadata_geo_images/geo_data2.png" width="99%">
 
-19. Go to collection dropdown and change its value to `Biosamples`. Click `Download Last Viewed Page as Excel file` button. You will see empty excel sheet with table headers. 
+19. Go to the collection dropdown and change its value to `Biosamples`. Since we will insert 99 Biosamples we will use excel import. Let's download the template excel file to facilitate import. Click the `Download Last Viewed Page as Excel file` button. You will see an empty excel sheet with table headers. 
 
 <img src="metadata_geo_images/geo_download_button.png" width="50%">
 <img src="metadata_geo_images/geo_empty_biosamples.png" width="99%">
@@ -159,18 +168,18 @@ Importing Metadata
 <img src="metadata_geo_images/geo_filled_biosamples.png" width="99%">
 
 ```
-Note: `BioSample` column in SraRunTable is copied to `Name` column.
+Note: `BioSample` column in SraRunTable is copied to the `Name` column.
 ```
 
-21. After saving this file, click on `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click `Load Table` button.
+21. After saving this file, click on the `Import on Excel File` button. Drag and drop your Biosamples.xlsx file and click the `Load Table` button.
 
 <img src="metadata_geo_images/geo_load_table1.png" width="99%">
 
-22. It will show the rows that are going to be inserted/updated in yellow color. Click Save button at the top left.
+22. It will show the rows that are going to be inserted/updated in yellow color. Click the Save button at the top left.
 
 <img src="metadata_geo_images/geo_load_table2.png" width="99%">
 
-23. It will insert the rows as follows and status of the operation will be shown at the left side.
+23. It will insert the rows as follows and the status of the operation will be shown at the left side.
 
 <img src="metadata_geo_images/geo_load_table3.png" width="99%">
 
@@ -178,19 +187,31 @@ Note: `BioSample` column in SraRunTable is copied to `Name` column.
 
 <img src="metadata_geo_images/geo_load_table4.png" width="99%"> 
 
-25. Switch to `Samples` collection by using collection dropdown. Similar to biosamples collection, click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
+25. Switch to `Samples` collection by using collection dropdown. Similar to the biosamples collection, click the `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
 <img src="metadata_geo_images/geo_filled_samples.png" width="99%">
 
 ```
-Note: `Sample Name` column in SraRunTable is copied to `Name` column.
+Note: `Sample Name` column in SraRunTable is copied to the `Name` column.
 ```
 
-26. After saving this file, click on `Import on Excel File` button. Drag and drop your Samples.xlsx file and click `Load Table` button. Now you're ready to import sample data with save button. Return back to table view by clicking `Show Table Format` button.
+26. After saving this file, click on the `Import on Excel File` button. Drag and drop your Samples.xlsx file and click the `Load Table` button. Now you're ready to import sample data with the save button. Return back to the table view by clicking the `Show Table Format` button.
 
-27. Go to collection dropdown and change its value to `Files`. Click `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
+27. Go to the collection dropdown and change its value to `Files`. Click the `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
 <img src="metadata_geo_images/geo_filled_files.png" width="99%">
 
+28. If you prefer you can use entered files in run submission. Select the `Runs` collection and click `Insert` button. 
+- Name: Your run name
+- Submission Type: Standard
+- Server: Viafoundry Server
+- Run Environment: Via Run Environment (AWS Batch)
+- Template run id: Enter your previous run id or enter 1 to use our demo run as template.
+- Inputs: Click `Select File` Button and use checkboxes to select your files.
+- You can change other input values according to your needs.
 
-Congratulations! You have configured metadata tracker for your project and imported GEO data into foundry!
+29. Click the save button. This will submit your run. You can track your run status on the dashboard.
+
+Congratulations! You have configured a metadata tracker for your project and imported GEO data into the foundry!
+
+
