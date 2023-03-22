@@ -43,6 +43,7 @@ Configuring Metadata Tracker
 4a. Now you can revisit `All Collections` and `Tree View` Tabs to see imported collections and their relationships.
 
 <img src="metadata_geo_images/geo5.png" width="99%">
+<img src="metadata_geo_images/geo6.png" width="99%">
 
 4b. If you click each `Series` tab, you will see the columns defined for the `Series` collection. The NamingPattern feature is defined for the id column to set a unique id for each inserted value. Since the pattern is `SE-${AUTOINCREMENT}`, new data will have the following ids: SE-1, SE-2, etc.
 
