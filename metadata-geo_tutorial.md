@@ -186,7 +186,7 @@ Note: `BioSample` column in SraRunTable is copied to the `Name` column.
 
 24. Now you can return to table view by clicking the button below:
 
-<img src="metadata_geo_images/geo_load_table4.png" width="99%"> 
+<img src="metadata_geo_images/geo_load_table4.png" width="50%"> 
 
 25. Switch to `Samples` collection by using collection dropdown. Similar to the biosamples collection, click the `Download Last Viewed Page as Excel file` button. Copy and paste the data in SraRunTable into this empty sheet as follows:
 
