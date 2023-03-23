@@ -109,7 +109,7 @@ Configuring Metadata Tracker
 * Note: 'biosamp' is the name of the Biosamples collection. All details listed in `All Collections` tab.
 ```
 
-12. Insert new columns by clicking the plus button at the top left.
+12. Insert new columns into Biosamples collection by clicking the plus button at the top left.
 
 | New Column Name      | New Column Label       | 
 | :----:      |    :----:              |    
@@ -136,7 +136,7 @@ This should create the following database structure:
 * Note: 'sample' is the name of the Samples collection. 
 ```
 
-14. Insert new columns by clicking the plus button at the top left. Enter new name and label values using the table below.
+14. Insert new columns into Samples collection by clicking the plus button at the top left. Enter new name and label values using the table below.
 
 | New Column Name      | New Column Label       | 
 | :----:      |    :----:              |    
