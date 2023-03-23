@@ -161,7 +161,7 @@ Expected database structure of sample collection:
 | id          | NamingPattern          | ```F-${AUTOINCREMENT}```  | ```${file.name}```    | 
 
 
-16. Now we're ready to insert metadata. Click on the "Data View" Button. 
+16. Now we're ready to insert metadata. Click on the "Data View" Button, Located right handside of the tabs menu. 
 
 Importing Metadata
 ========
