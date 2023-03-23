@@ -143,7 +143,8 @@ This should create the following database structure:
 
 | New Column Name      | New Column Label       | 
 | :----:      |    :----:              |    
-| Assay Type            | Assay Type            | 
+| Assay Type            | Assay Type            |
+| Library Name         | Library Name |
 | LibraryLayout          | LibraryLayout          | 
 | LibrarySelection          | LibrarySelection          | 
 | LibrarySource          | LibrarySource          | 
