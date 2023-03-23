@@ -123,8 +123,10 @@ Enter new name and label values using the table above and click save button. You
 <img src="metadata_geo_images/geo_insert_organism.png" width="99%">
 
 This should create the following database structure:
-Note that the id column has been normalized to lower case.
 
+```
+* Note that the id column has been normalized to lower case.
+```
 <img src="metadata_geo_images/geo_biosample_columns.png" width="99%">
 
 13. Click Samples Tab and change the `NamingPattern` of `id` column as follows: 
