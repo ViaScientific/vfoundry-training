@@ -90,16 +90,24 @@ Configuring Metadata Tracker
 
 10. Return back to Foundry Metadata tracker, and click the Series tab. Instead of auto increment values (SE-1, SE-2 etc,) using BioProject-ID for referencing would simplify our referencing strategy. While entering data, we will enter BioProject-ID into the name column and we want to save this entered value as `id`. Change the `NamingPattern` of `id` column as follows to save `name` value as `id`:
 
-| Column      | Field of change        | Old Value        |  New Value        | 
-| :----:      |    :----:              |    :----:      |   :----:      | 
-| id          | NamingPattern          | ```SE-${AUTOINCREMENT}```  | ```${series.name}```    |  
+| Column      | Field of change        | Old Value                 |  New Value            | 
+| :----:      |    :----:              |    :----:                 |   :----:              | 
+| id          | NamingPattern          | ```SE-${AUTOINCREMENT}``` | ```${series.name}```  |
 
+```
+* Note: 'series' is the name of the Series collection. Please check `All Collections` tab and Name and Label columns.
+```
 
 11. Similarly, to make `name` column a identifier for biosamples, click on Biosamples Tab and change the `NamingPattern` of `id` column as follows: 
 
 | Column      | Field of change        | Old Value        |  New Value        | 
 | :----:      |    :----:              |    :----:      |   :----:      | 
 | id          | NamingPattern          | ```B-${AUTOINCREMENT}```  | ```${biosamp.name}```    |  
+
+
+```
+* Note: 'biosamp' is the name of the Biosamples collection. All details listed in `All Collections` tab.
+```
 
 12. Insert new columns by clicking the plus button at the top left.
 
@@ -123,6 +131,10 @@ This should create the following database structure:
 | Column      | Field of change        | Old Value        |  New Value        | 
 | :----:      |    :----:              |    :----:      |   :----:      | 
 | id          | NamingPattern          | ```SA-${AUTOINCREMENT}```  | ```${sample.name}```    |  
+
+```
+* Note: 'sample' is the name of the Samples collection. 
+```
 
 14. Insert new columns by clicking the plus button at the top left. Enter new name and label values using the table below.
 
